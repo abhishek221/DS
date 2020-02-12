@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DSAlab1ArrayADT.iml" filepath="$PROJECT_DIR$/DSAlab1ArrayADT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DSAlab1ArrayADT.iml" filepath="$PROJECT_DIR$/.idea/DSAlab1ArrayADT.iml" />
     </modules>
   </component>
 </project>
