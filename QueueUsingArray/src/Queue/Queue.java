@@ -19,10 +19,17 @@ public class Queue implements QueueADT
     @Override
     public void Enqueue(int data)
     {
-        queue[rear] = data;
-        rear = rear +1;
-        size = size+1;
+        if(size ==4)
+        {
+            System.out.println("the queue is full , cant insert ! ");
+        }
+        else {
 
+
+            queue[rear] = data;
+            rear = (rear + 1) % 4;
+            size = (size + 1);
+        }
 
     }
 
@@ -30,7 +37,7 @@ public class Queue implements QueueADT
     public int Dequeue()
     {
         int data = queue[front];
-        front = front +1;
+        front = (front +1)%4;
         size= size-1;
         return data;
     }
@@ -38,12 +45,27 @@ public class Queue implements QueueADT
     @Override
     public void show()
     {
-        for (int i = 0+front; i <rear ; i++)
+        for (int i = 0; i <size ; i++)
         {
-            System.out.println(queue[i]);
+            System.out.println(queue[(i+front)%4]);
 
         }
         System.out.println("the size is "+size);
+
+    }
+
+    @Override
+    public int front() {
+        return 0;
+    }
+
+    @Override
+    public int rear() {
+        return 0;
+    }
+
+    @Override
+    public void isEmpty() {
 
     }
 }
