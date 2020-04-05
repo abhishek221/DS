@@ -6,6 +6,8 @@
  */
 package main;
 
+import bubblesort.BubbleSort;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -23,7 +25,7 @@ public class Main
 
         }
 
-        System.out.println("The array you entered is ");
+        System.out.println("The random generated array is");
         System.out.println(Arrays.toString(randomNumbers));
 
         System.out.println("how would you want to sort your array");
@@ -32,6 +34,15 @@ public class Main
 
         switch (response){
             case 1:
+                // BubbleSort
+                BubbleSort obj = new BubbleSort();
+                obj.bubbleSort(randomNumbers);
+                break;
+
+            default:
+                System.out.println("please enter a valid number");
+                break;
+
 
         }
 
